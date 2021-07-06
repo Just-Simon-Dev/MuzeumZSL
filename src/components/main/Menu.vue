@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
 export default {
     data: () => {
         return{
-            arts: [{title: 'o muzeum', href: '#muzeum'}, {title: 'aktualnosci', href:'#news'}, {title: 'eskponaty', href: '#items'}, {title: 'kontakt', href: '#contact'}]
+            arts: [{title: 'kontakt', href: '#contact'}, {title: 'eskponaty', href: '#items'}, {title: 'aktualnosci', href:'#news'}, {title: 'o muzeum', href: '#muzeum'}]
         }
     }
 }
@@ -33,7 +33,7 @@ export default {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Quicksand';
-    color: #fff;
+    color: #fff !important;
 }
 #nav{
     position: fixed;
