@@ -1,17 +1,17 @@
 <template>
   <div class="main">
     <Menu></Menu>
-    <Content></Content>
+    <Banner></Banner>
   </div>
 </template>
 
 <script>
-import Menu from "./Menu.vue";
-import Content from "./Content.vue";
+import Menu from "../main/Menu.vue";
+import Banner from "./Banner.vue";
 export default {
   components: {
     Menu,
-    Content,
+    Banner,
   },
 };
 </script>

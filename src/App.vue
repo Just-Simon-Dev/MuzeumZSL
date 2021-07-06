@@ -1,22 +1,22 @@
-<template>
+E<template>
   <div id="app">
-    <Main></Main>
+    <Items></Items>
   </div>
 </template>
 
 <script>
-import Main from './components/main/Main.vue'
+// import Main from './components/main/Main.vue'
+import Items from "./components/items/Items.vue";
 export default {
   components: {
-    Main
+    Items,
   },
   data() {
     return {
-      message: 'Hello World',
+      message: "Hello World",
     };
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>
