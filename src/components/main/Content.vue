@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style>
+.content{
+    height: 100vh;
+}
 .content-title{
     position: absolute;
     top: 50%;

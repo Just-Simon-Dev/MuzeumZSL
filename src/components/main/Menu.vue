@@ -81,5 +81,6 @@ export default {
 }
 .black{
     background-color: rgba(0, 0, 0, 0.6) !important;
+    border-bottom: none !important;
 }
 </style>
