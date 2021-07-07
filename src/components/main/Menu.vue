@@ -1,8 +1,10 @@
 <template>
   <div id="nav">
+      <a href="#" style="text-decoration: none">
       <div class="nav-title">
           Muzeum ZSŁ
       </div>
+      </a>
       <div class="nav-links">
         <div class="nav-element" v-for="art in arts">
             <a :href="art.href">
