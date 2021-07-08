@@ -8,6 +8,15 @@ module.exports = {
             { test: /\.js$/, use: 'babel-loader' },
             { test: /\.vue$/, use: 'vue-loader' },
             { test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                options: {
+                    publicPath: 'assets',
+                    outputPath: 'images',
+                    name: '[name].[ext]',
+                },
+            },
         ]
     },
     plugins: [

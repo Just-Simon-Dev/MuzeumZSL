@@ -1,13 +1,16 @@
 <template>
   <div id="nav">
-    <div class="nav-title">
-      Muzeum ZSŁ
-    </div>
-    <div class="nav-links">
-      <div class="nav-element" v-for="art in arts">
-        <a :href="art.href">
-          {{ art.title }}
-        </a>
+      <a href="#" style="text-decoration: none">
+      <div class="nav-title">
+          Muzeum ZSŁ
+      </div>
+      </a>
+      <div class="nav-links">
+        <div class="nav-element" :key="art.title" v-for="art in arts">
+            <a :href="art.href">
+                {{art.title}}
+            </a>
+        </div>
       </div>
     </div>
   </div>
@@ -84,7 +87,8 @@ export default {
   transform: scaleX(1);
   transform-origin: left;
 }
-.black {
-  background-color: rgba(0, 0, 0, 0.6) !important;
+.black{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border-bottom: none !important;
 }
 </style>

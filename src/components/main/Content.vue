@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="contentComp">
     <div class="content-title animate__animated animate__fadeInUp">
       <h1>
         Witamy w muzeum <br />
@@ -27,11 +27,14 @@ export default {
 </script>
 
 <style>
-.content-title {
-  position: absolute;
-  top: 50%;
-  left: 12%;
-  line-height: 30px;
+.Content{
+    height: 100vh;
+}
+.content-title{
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    line-height: 30px;
 }
 .arrow {
   position: absolute;

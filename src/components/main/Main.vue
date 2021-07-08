@@ -18,6 +18,7 @@ export default {
 
 <style>
 .main {
+  position: relative;
   background-color: #2c2c54;
   width: 100%;
   height: 100vh;
