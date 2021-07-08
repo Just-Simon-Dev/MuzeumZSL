@@ -7,24 +7,13 @@
           <div class="content-btn"><a class="btn" :href="this.href">Czytaj więcej</a></div>
           
         </div>
-        <div class="background" :style="{backgroundImage: `url(${images[this.img]})`}"></div>
+        <div class="background" :style="{backgroundImage: `url(/images/${this.img}.jpg)`}"></div>
   </div>
 </template>
 
 <script>
-import computer from './imgs/computer.jpg'
-import gramofon from './imgs/gramofon.jpg'
-import magnetofon from './imgs/magnetofon.jpg'
-import radio from './imgs/radio.jpg'
-import tv from './imgs/tv.jpg'
-
 export default {
     props: ['title', 'content', 'img', 'href'],
-    data: () => {
-        return {
-            images: {'computer': computer, 'gramofon':  gramofon, 'magnetofon':  magnetofon, 'radio':  radio, 'tv':  tv},
-        }
-    }
 }
 </script>
 

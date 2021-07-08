@@ -44,8 +44,9 @@ export default {
     justify-content:center;
     align-items: center;
     text-align: center;
-    border-top: 1px solid #2c2c54;
-    border-bottom: 1px solid #2c2c54;
+    /* border-top: 2px solid #2c2c54;
+    border-bottom: 2px solid #2c2c54; */
+    background: #2c2c54;
     padding: 10px;
 }
 </style>
