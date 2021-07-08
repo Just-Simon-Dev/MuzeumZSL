@@ -1,5 +1,5 @@
 <template>
-  <div class="card content-title" >
+  <div class="card content-title">
       
       <div class="title">{{this.title}}</div>
       <div class="content">
@@ -26,7 +26,7 @@ export default {
     background: #000;
     margin: 20px 10px;
     overflow: hidden;
-    color: #fff;
+    color: #fff !important;
     height: 300px;
     width: 250px;
     text-align: center;
@@ -83,6 +83,7 @@ export default {
     padding: 2px 5px;
     text-decoration: none !important;
     transition: 0.2s ease-in-out !important;
+    color: #fff !important;
 }
 .btn:hover{
     background: #fff;

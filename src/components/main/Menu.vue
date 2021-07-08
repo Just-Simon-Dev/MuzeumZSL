@@ -35,7 +35,7 @@ export default {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Quicksand';
-    color: #fff !important;
+    
 }
 #nav{
     position: fixed;
@@ -47,10 +47,12 @@ export default {
     z-index: 2;
     border-bottom: 1px solid #fff;
     transition: .3s ease-in-out !important;
+    color: #fff !important;
 }
 .nav-title{
     font-size: 2em;
     opacity: 1 !important;
+    color: #fff !important;
 }
 .nav-element a{
     color: #fff;

@@ -10,11 +10,12 @@ module.exports = {
             { test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
             {
                 test: /\.(png|jpe?g|gif)$/i,
+                type: 'asset/resource',
                 loader: 'file-loader',
                 options: {
-                    publicPath: 'assets',
+                    
                     outputPath: 'images',
-                    name: '[name].[ext]',
+                    name: '[path][name].[ext]'
                 },
             },
         ]
