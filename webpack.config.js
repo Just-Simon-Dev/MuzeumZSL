@@ -13,9 +13,9 @@ module.exports = {
                 type: 'asset/resource',
                 loader: 'file-loader',
                 options: {
-                    
+                    publicPath: 'assets',
                     outputPath: 'images',
-                    name: '[path][name].[ext]'
+                    name: '[name].[ext]'
                 },
             },
         ]
