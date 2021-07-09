@@ -1,13 +1,12 @@
 <template>
   <div class="card content-title">
-      
-      <div class="title">{{this.title}}</div>
-      <div class="content">
-          <div class="content-text">{{this.content}}</div>
-          <div class="content-btn"><a class="btn" :href="this.href">Czytaj więcej</a></div>
-          
-        </div>
-        <div class="background" :style="{backgroundImage: `url(/images/${this.img}.jpg)`}"></div>
+      <a class="btn" :href="this.href">
+        <div class="title">{{this.title}}</div>
+        <div class="content">
+            <div class="content-text">{{this.content}}</div>
+            </div>
+            <div class="background" :style="{backgroundImage: `url(/images/${this.img}.jpg)`}"></div>
+        </a>
   </div>
 </template>
 
@@ -76,26 +75,7 @@ export default {
     line-height: 15px;
 }
 .btn{
-    padding-top: 5px;
-    border: 1px solid #fff;
-    border-radius: 30px;
-    background: transparent;
-    padding: 2px 5px;
     text-decoration: none !important;
-    transition: 0.2s ease-in-out !important;
     color: #fff !important;
-}
-.btn:hover{
-    background: #fff;
-    color: #000 !important;
-}
-.content-btn{
-    padding-top: 5px;
-    position: relative;
-    height: 15%;
-    width: 100%;
-    text-align: left;
-    z-index: 1 !important;
-    padding-left: 5px;
 }
 </style>
