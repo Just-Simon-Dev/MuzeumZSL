@@ -3,8 +3,9 @@
       <div class="footer-comp footer-left">
           <div class="footer-quote">Historia według Zespołu Szkół Łączności w Gdańsku</div>
           <div class="footer-social-media">
-            <a class="footer-icon"><md-icon style="color: #fff">facebook</md-icon> Facebook</a>
-            
+            <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'facebook']" /> <span class="ic-text">Facebook</span></a>
+            <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'instagram']" /> <span class="ic-text">Instagram</span></a>
+            <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'youtube-square']" /> <span class="ic-text">Youtube</span></a>
           </div>
       </div>
       <div class="footer-comp footer-right">
@@ -27,7 +28,7 @@
 export default {
     data: () => {
         return{
-            arts: [{title: 'kontakt', href: '#contact', isSelect: false}, {title: 'eskponaty', href: '#items', isSelect: true, comps: [{title: 'telewizory', href: '/tvs'}, {title: 'radia', href: '/radios'}, {title: 'magnetofony', href: '/magnetofons'}, {title: 'komputery', href: '/computers'}, {title: 'gramofony', href: '/gramofons'}]}, {title: 'aktualności', href:'#news', isSelect: false}, {title: 'o muzeum', href: '#muzeum', isSelect: false}]
+            arts: [{title: 'o muzeum', href: '#muzeum', isSelect: false}, {title: 'aktualności', href:'#news', isSelect: false}, {title: 'eskponaty', href: '#items', isSelect: true, comps: [{title: 'telewizory', href: '/tvs'}, {title: 'radia', href: '/radios'}, {title: 'magnetofony', href: '/magnetofons'}, {title: 'komputery', href: '/computers'}, {title: 'gramofony', href: '/gramofons'}]}, {title: 'kontakt', href: '#contact', isSelect: false}]
         }
     }
 }
@@ -68,10 +69,15 @@ export default {
     margin: 0 0 0 15px;
 }
 .footer-icon{
+    display: block;
     color: #fff !important;
     cursor: pointer;
     text-decoration: none !important;
-    line-height: 24px;
+    height: 24px !important;
+    transition: 0.3s ease-in-out !important;
+}
+.footer-icon:hover, .ic, .ic-text{
+    font-size: 1.1em;
 }
 .footer-nav{
     display: inline-block;
@@ -100,5 +106,11 @@ export default {
     padding: 15px 0 0 15px;
     line-height: 50px;
     height: 100px;
+}
+.ic, .ic-text{
+    font-size: 1.2em;
+}
+.ic-text{
+    letter-spacing: 1px;
 }
 </style>

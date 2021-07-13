@@ -14,6 +14,13 @@ module.exports = {
             {
                 test: /\.png/,
                 type: 'asset/resource'
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                loader: "file-loader",
+                options: {
+                    outputPath: "../fonts",
+                }
             }
         ]
     },

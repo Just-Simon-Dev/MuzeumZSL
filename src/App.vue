@@ -23,10 +23,7 @@ export default {
     News,
     Muzeum,
     Contact,
-    Footer
+    Footer,
   }
 };
 </script>
-
-<style>
-</style>

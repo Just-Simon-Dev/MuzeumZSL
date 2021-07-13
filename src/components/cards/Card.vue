@@ -1,11 +1,11 @@
 <template>
-  <div class="card content-title">
+  <div class="card content-title" v-animate-onscroll.repeat="'animate__animated animate__zoomIn'">
       <a class="btn" :href="this.href">
         <div class="title">{{this.title}}</div>
         <div class="content">
             <div class="content-text">{{this.content}}</div>
             </div>
-            <div class="background" :style="{backgroundImage: `url(/images/${this.img}.jpg)`}"></div>
+            <div class="background" :style="{backgroundImage: `url(${this.img})`}"></div>
         </a>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
     box-sizing: border-box;
 }
 .card{
-    position:relative;
+    position:static;
     background: #000;
     margin: 20px 10px;
     overflow: hidden;
@@ -29,8 +29,7 @@ export default {
     height: 300px;
     width: 250px;
     text-align: center;
-    z-index: -1;
-    transform: translate(-75%, -75%);
+    z-index: 1;
     
 }
 .background{
@@ -43,16 +42,17 @@ export default {
     background-attachment: fixed !important;
     background-position: center !important; 
     z-index: 0;
-    transition: .3s ease-in-out;
+    opacity: 0.8;
+    transition: 1s ease-in-out;
 }
 .card:hover .background{
     filter: blur(5px) !important;
     transform: scale(1.2);
+    opacity: 0.5;
 }
 .card:hover .title{
     height: 20%;
     line-height: 60px;
-    background: rgba(0, 0, 0, .6);
 }
 .title{
     position: relative;
@@ -62,12 +62,10 @@ export default {
     height: 100%;
     border-bottom: 1px solid #fff;
     transition: 1s ease-in-out;
-    background: rgba(0, 0, 0, .3);
     z-index: 1 !important;
 }
 .content{
     position: relative;
-    background: rgba(0, 0, 0, .6);
     z-index: 1 !important;
 }
 .content-text{

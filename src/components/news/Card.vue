@@ -1,6 +1,6 @@
 <template>
-  <div class="news-card">
-      <div class="news-card-title">{{this.title}}</div>
+  <div class="news-card" v-animate-onscroll.repeat="'animate__animated animate__zoomIn'">
+      <div class="news-card-title" >{{this.title}}</div>
       <div class="news-card-content">{{this.content}}</div>
       <a :href="this.href"><div class="news-card-url">Czytaj więcej</div></a>
   </div>

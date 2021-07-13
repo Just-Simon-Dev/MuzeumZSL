@@ -16,11 +16,11 @@ export default {
     data: () => {
         return {
             contents: [
-                {id: 1, title: 'telewizory', content: 'Lorem', img: 'tv', href: '/tvs'}, 
-                {id: 2, title: 'radia', content: 'lorem', img: 'radio', href: '/radios'},
-                {id: 3, title: 'magnetofony', content: 'lorem', img: 'magnetofon', href: '/magnetofons'},
-                {id: 4, title: 'komputery', content: 'lorem', img: 'computer', href: '/computers'},
-                {id: 5, title: 'gramofony', content: 'lorem', img: 'gramofon', href: '/gramofons'},
+                {id: 1, title: 'telewizory', content: 'Lorem', img: 'https://i.imgur.com/GtIfYh7.jpg', href: '/tvs'}, 
+                {id: 2, title: 'radia', content: 'lorem', img: 'https://i.imgur.com/E7FLS18.png', href: '/radios'},
+                {id: 3, title: 'magnetofony', content: 'lorem', img: 'https://i.imgur.com/O8PTPEG.png', href: '/magnetofons'},
+                {id: 4, title: 'komputery', content: 'lorem', img: 'https://i.imgur.com/aZKEOg9.png', href: '/computers'},
+                {id: 5, title: 'gramofony', content: 'lorem', img: 'https://i.imgur.com/6cqv5ud.png', href: '/gramofons'},
             ]
         }
     }
@@ -34,7 +34,6 @@ export default {
 }
 .space{
     height: 20vh;
-    width: 100%;
 }
 .container{
     margin: auto;
