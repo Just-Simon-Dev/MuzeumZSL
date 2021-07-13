@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="card content-title" v-animate-onscroll.repeat="'animate__animated animate__zoomIn'">
       <a class="btn" :href="this.href">
         <div class="title">{{this.title}}</div>
@@ -8,19 +7,6 @@
             </div>
             <div class="background" :style="{backgroundImage: `url(${this.img})`}"></div>
         </a>
-=======
-  <div class="card content-title">
-    <a class="btn" :href="this.href">
-      <div class="title">{{ this.title }}</div>
-      <div class="content">
-        <div class="content-text">{{ this.content }}</div>
-      </div>
-      <div
-        class="background"
-        :style="{ backgroundImage: `url(../assets/images/${this.img}.jpg)` }"
-      ></div>
-    </a>
->>>>>>> a385c054289f49435519db39a4f88e599795b3ad
   </div>
 </template>
 
