@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
       <div class="footer-comp footer-left">
-          <div class="footer-quote">Historia według Zespołu Szkół Łączności w Gdańsku</div>
+          <div class="footer-quote"><span style="color: #ff5252">Historia</span> według <span style="color: #ff5252">Zespołu Szkół Łączności</span> w Gdańsku</div>
           <div class="footer-social-media">
             <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'facebook']" /> <span class="ic-text">Facebook</span></a>
             <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'instagram']" /> <span class="ic-text">Instagram</span></a>
