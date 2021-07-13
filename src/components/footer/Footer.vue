@@ -1,6 +1,5 @@
 <template>
   <div id="footer">
-<<<<<<< HEAD
       <div class="footer-comp footer-left">
           <div class="footer-quote">Historia według Zespołu Szkół Łączności w Gdańsku</div>
           <div class="footer-social-media">
@@ -8,75 +7,41 @@
             <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'instagram']" /> <span class="ic-text">Instagram</span></a>
             <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'youtube-square']" /> <span class="ic-text">Youtube</span></a>
           </div>
-=======
-    <div class="footer-comp footer-left">
-      <div class="footer-quote">
-        Historia według Zespołu Szkół Łączności w Gdańsku
->>>>>>> a385c054289f49435519db39a4f88e599795b3ad
       </div>
-      <div class="footer-social-media">
-        <a class="footer-icon"
-          ><md-icon style="color: #fff">facebook</md-icon> Facebook</a
-        >
-      </div>
-    </div>
-    <div class="footer-comp footer-right">
-      <table class="footer-tb">
-        <td class="footer-nav" :key="art.title" v-for="art in arts">
-          <a :href="art.href"
-            ><div class="art-title">{{ art.title }}</div></a
-          >
-          <tr
-            class="column"
-            :key="comp.title"
-            if="art.isSelect"
-            v-for="comp in art.comps"
-          >
-            <a :href="comp.href" class="footer-links">{{ comp.title }}</a>
-          </tr>
-        </td>
-      </table>
-      <div class="footer-rights">
-        Wszelkie prawa zastrzeżone &copy;
-        <span style="letter-spacing: 1px;">MuzeumZSŁ</span> 2021
+      <div class="footer-comp footer-right">
+        <table class="footer-tb">
+          <td class="footer-nav" :key="art.title" v-for="art in arts">
+            <a :href="art.href"
+              ><div class="art-title">{{ art.title }}</div></a
+            >
+            <tr
+              class="column"
+              :key="comp.title"
+              if="art.isSelect"
+              v-for="comp in art.comps"
+            >
+              <a :href="comp.href" class="footer-links">{{ comp.title }}</a>
+            </tr>
+          </td>
+        </table>
+        <div class="footer-rights">
+          Wszelkie prawa zastrzeżone &copy;
+          <span style="letter-spacing: 1px;">MuzeumZSŁ</span> 2021
+        </div>
       </div>
     </div>
-  </div>
+    </div>
+    
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
     data: () => {
         return{
             arts: [{title: 'o muzeum', href: '#muzeum', isSelect: false}, {title: 'aktualności', href:'#news', isSelect: false}, {title: 'eskponaty', href: '#items', isSelect: true, comps: [{title: 'telewizory', href: '/tvs'}, {title: 'radia', href: '/radios'}, {title: 'magnetofony', href: '/magnetofons'}, {title: 'komputery', href: '/computers'}, {title: 'gramofony', href: '/gramofons'}]}, {title: 'kontakt', href: '#contact', isSelect: false}]
         }
     }
 }
-=======
-  data: () => {
-    return {
-      arts: [
-        { title: "kontakt", href: "#contact", isSelect: false },
-        {
-          title: "eskponaty",
-          href: "#items",
-          isSelect: true,
-          comps: [
-            { title: "telewizory", href: "/tvs" },
-            { title: "radia", href: "/radios" },
-            { title: "magnetofony", href: "/magnetofons" },
-            { title: "komputery", href: "/computers" },
-            { title: "gramofony", href: "/gramofons" },
-          ],
-        },
-        { title: "aktualności", href: "#news", isSelect: false },
-        { title: "o muzeum", href: "#muzeum", isSelect: false },
-      ],
-    };
-  },
-};
->>>>>>> a385c054289f49435519db39a4f88e599795b3ad
 </script>
 
 <style>
@@ -153,7 +118,6 @@ export default {
   line-height: 50px;
   height: 100px;
 }
-<<<<<<< HEAD
 .ic, .ic-text{
     font-size: 1.2em;
 }
@@ -161,6 +125,3 @@ export default {
     letter-spacing: 1px;
 }
 </style>
-=======
-</style>
->>>>>>> a385c054289f49435519db39a4f88e599795b3ad
