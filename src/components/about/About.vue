@@ -2,8 +2,8 @@
   <div id="muzeum">
       <div class="empty"></div>
       <div class="about-content">
-        <div class="about-title">O muzeum</div>
-        <div class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consectetur saepe alias dolor impedit ipsa! Dicta maiores provident voluptate explicabo molestiae consectetur molestias, porro ab sapiente libero aperiam. Quisquam, obcaecati.</div>
+        <div v-animate-onscroll.repeat="'animate__animated animate__fadeInUp'" class="about-title">O muzeum</div>
+        <div v-animate-onscroll.repeat="'animate__animated animate__fadeInUp'" class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consectetur saepe alias dolor impedit ipsa! Dicta maiores provident voluptate explicabo molestiae consectetur molestias, porro ab sapiente libero aperiam. Quisquam, obcaecati.</div>
       </div>
   </div>
 </template>
@@ -18,6 +18,7 @@ export default {
 #muzeum{
     width: 100%;
     height: 100vh;
+    background: #fff;
 }
 .empty{
     height: 10vh;

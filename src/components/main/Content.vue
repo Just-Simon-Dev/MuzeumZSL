@@ -1,6 +1,6 @@
 <template>
-  <div class="contentComp">
-    <div class="content-title animate__animated animate__fadeInUp">
+  <div class="content-comp">
+    <div v-animate-onscroll.repeat="'animate__animated animate__fadeInUp'" class="content-title">
       <h1>
         Witamy w muzeum <br />
         techniki Zespołu Szkół Łączności!
@@ -13,7 +13,9 @@
         href="#muzeum"
       ></a>
     </div>
+    <img class="img parallax" src="https://i.imgur.com/WypAtUb.png">
   </div>
+  
 </template>
 
 <script>
@@ -27,7 +29,11 @@ export default {
 </script>
 
 <style>
-.Content{
+.img{
+  position: absolute;
+  right: -30px;
+  top: 50px;
+}nt-comp{
     height: 100vh;
 }
 .content-title{

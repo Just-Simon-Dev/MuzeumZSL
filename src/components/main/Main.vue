@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div id="main">
     <Menu></Menu>
     <Content></Content>
   </div>
@@ -17,10 +17,11 @@ export default {
 </script>
 
 <style>
-.main {
+#main {
   position: relative;
   background-color: #2c2c54;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 </style>

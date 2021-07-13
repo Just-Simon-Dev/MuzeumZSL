@@ -10,13 +10,12 @@ import Items from "./components/items/Items.vue";
 export default {
   components: {
     Items,
-  },
-  data() {
-    return {
-      message: "Hello World",
-    };
+    // Main,
+    // About,
+    // News,
+    // Muzeum,
+    // Contact,
+    // Footer,
   },
 };
 </script>
-
-<style></style>
