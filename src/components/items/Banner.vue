@@ -19,18 +19,17 @@ export default {
   width: 100%;
   height: 70vh;
   min-height: 500px;
-  position: relative;
-  top: 53px;
   background-image: url("https://static.polityka.pl/_resource/res/path/4e/5a/4e5a5440-4db1-4708-b5b7-8287fa65b8aa");
-  margin-bottom: 10px;
+  background-attachment: fixed;
 }
 .banner > h2 {
-  height: 200px;
-  font-size: 80px;
-  line-height: 100px;
-  position: relative;
-  top: 30px;
-  left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 10em;
+  background: rgba(0, 0, 0, .6);
   color: white;
 }
 </style>

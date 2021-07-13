@@ -2,7 +2,6 @@
   <div class="main">
     <Menu></Menu>
     <Banner></Banner>
-    <div style="height:10px"></div>
     <Entry v-for="item in items" :key="item.id" :id="item.id"></Entry>
   </div>
 </template>
@@ -29,6 +28,6 @@ export default {
 .main {
   background-color: #2c2c54;
   width: 100%;
-  height: 100vh;
+  overflow: auto;
 }
 </style>

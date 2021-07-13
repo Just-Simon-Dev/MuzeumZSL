@@ -1,12 +1,14 @@
 <template>
-  <div class="content">
-    <div class="image"><img :src="imagePath" :alt="'image of ' + title" /></div>
+  <div class="content" v-animate-onscroll.repeat="'animate__animated animate__fadeIn'">
+    <div class="image" :style="`background: url('${imagePath}')`"></div>
     <div class="text">
       <h3 class="title">{{ title }}</h3>
       <div class="description">
         <p>{{ description }}</p>
       </div>
+      <button class="btn" type="button"><font-awesome-icon class="ic" :icon="['fas', 'table']" /></button>
     </div>
+    
   </div>
 </template>
 
@@ -18,7 +20,7 @@ export default {
       imagePath: "../assets/images/loading.jpg",
       title: "Loading...",
       description:
-        "wait to load article from database, if you have poor network it can tak awhile",
+        "wait for the article to be loaded from database",
     };
   },
   created: function() {
@@ -41,41 +43,77 @@ export default {
 
 <style>
 .content {
+  position: relative;
   height: 40vh;
   min-height: 400px;
   width: 80%;
-  background: rgb(3, 20, 200);
-  margin: 0 0 100px 0;
-  position: relative;
-  top: 35px;
+  margin: 100px 0 0 0;
+  transition: 0.3s ease-in-out;
+}
+.content:nth-child(2n){
+  background: #eb3b5a;
+  color: #fff;
+  float: right;
+  border-radius: 10px 0 0 10px !important;
+}
+.content:nth-child(2n) .image{
+  border-radius: 10px 0 0 10px !important;
+}
+.content:nth-child(2n) .btn{
+  background: #fff;
+  color: #eb3b5a;
+  right: 10px;
+}
+.content:nth-child(2n+1){
+  background: #fff;
+  float: left;
+  border-radius: 0 10px 10px 0;
+}
+.content:nth-child(2n+1) .image{
+  float: right;
+  border-radius: 0 10px 10px 0;
+}
+.content:nth-child(2n+1) .btn{
+  background: #eb3b5a;
+  color: #fff;
+  left: 10px;
 }
 .image {
   width: 30%;
   height: 100%;
   float: left;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important; 
 }
 img {
   height: inherit !important;
 }
 .text {
+  position: sticky;
   width: 70%;
   float: left;
 }
-h3 {
+.title {
   width: 40%;
-  margin: auto;
+  margin: 20px auto;
   text-align: center;
   font-size: 30px;
   padding: 17px 0 12px 0;
-  border-radius: 40px;
-  background: #eee;
 }
 .description {
   width: 80%;
-  background-color: #eee;
-  border-bottom-right-radius: 10px;
   margin: auto;
   padding: 20px;
   line-height: 200%;
+}
+.btn{
+  position: absolute;
+  bottom: 10px;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
 }
 </style>

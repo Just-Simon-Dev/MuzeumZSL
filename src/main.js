@@ -11,8 +11,9 @@ import {
     faFacebook,
     faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import {faTable} from "@fortawesome/free-solid-svg-icons"
 
-library.add(faInstagram, faFacebook, faYoutubeSquare);
+library.add(faInstagram, faFacebook, faYoutubeSquare, faTable);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.use(VueAnimateOnScroll);
