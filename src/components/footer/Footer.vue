@@ -1,5 +1,6 @@
 <template>
   <div id="footer">
+<<<<<<< HEAD
       <div class="footer-comp footer-left">
           <div class="footer-quote">Historia według Zespołu Szkół Łączności w Gdańsku</div>
           <div class="footer-social-media">
@@ -7,67 +8,112 @@
             <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'instagram']" /> <span class="ic-text">Instagram</span></a>
             <a class="footer-icon"><font-awesome-icon class="ic" :icon="['fab', 'youtube-square']" /> <span class="ic-text">Youtube</span></a>
           </div>
+=======
+    <div class="footer-comp footer-left">
+      <div class="footer-quote">
+        Historia według Zespołu Szkół Łączności w Gdańsku
+>>>>>>> a385c054289f49435519db39a4f88e599795b3ad
       </div>
-      <div class="footer-comp footer-right">
-          <table class="footer-tb">
-            <td class="footer-nav" v-for="art in arts">
-                <a :href="art.href"><div class="art-title">{{art.title}}</div></a>
-                <tr class="column" v-if="art.isSelect" v-for="comp in art.comps">
-                    <a :href="comp.href" class="footer-links">{{comp.title}}</a>
-                </tr>
-            </td>
-          </table>
-          <div class="footer-rights">
-              Wszelkie prawa zastrzeżone &copy <span style="letter-spacing: 1px;">MuzeumZSŁ</span> 2021
-          </div>
+      <div class="footer-social-media">
+        <a class="footer-icon"
+          ><md-icon style="color: #fff">facebook</md-icon> Facebook</a
+        >
       </div>
+    </div>
+    <div class="footer-comp footer-right">
+      <table class="footer-tb">
+        <td class="footer-nav" :key="art.title" v-for="art in arts">
+          <a :href="art.href"
+            ><div class="art-title">{{ art.title }}</div></a
+          >
+          <tr
+            class="column"
+            :key="comp.title"
+            if="art.isSelect"
+            v-for="comp in art.comps"
+          >
+            <a :href="comp.href" class="footer-links">{{ comp.title }}</a>
+          </tr>
+        </td>
+      </table>
+      <div class="footer-rights">
+        Wszelkie prawa zastrzeżone &copy;
+        <span style="letter-spacing: 1px;">MuzeumZSŁ</span> 2021
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
     data: () => {
         return{
             arts: [{title: 'o muzeum', href: '#muzeum', isSelect: false}, {title: 'aktualności', href:'#news', isSelect: false}, {title: 'eskponaty', href: '#items', isSelect: true, comps: [{title: 'telewizory', href: '/tvs'}, {title: 'radia', href: '/radios'}, {title: 'magnetofony', href: '/magnetofons'}, {title: 'komputery', href: '/computers'}, {title: 'gramofony', href: '/gramofons'}]}, {title: 'kontakt', href: '#contact', isSelect: false}]
         }
     }
 }
+=======
+  data: () => {
+    return {
+      arts: [
+        { title: "kontakt", href: "#contact", isSelect: false },
+        {
+          title: "eskponaty",
+          href: "#items",
+          isSelect: true,
+          comps: [
+            { title: "telewizory", href: "/tvs" },
+            { title: "radia", href: "/radios" },
+            { title: "magnetofony", href: "/magnetofons" },
+            { title: "komputery", href: "/computers" },
+            { title: "gramofony", href: "/gramofons" },
+          ],
+        },
+        { title: "aktualności", href: "#news", isSelect: false },
+        { title: "o muzeum", href: "#muzeum", isSelect: false },
+      ],
+    };
+  },
+};
+>>>>>>> a385c054289f49435519db39a4f88e599795b3ad
 </script>
 
 <style>
-#footer{
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    background: #2c2c2c;
-    padding: 50px;
-    color: #fff;
+#footer {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: #2c2c2c;
+  padding: 50px;
+  color: #fff;
 }
-.footer-comp{
-    float: left;
+.footer-comp {
+  float: left;
 }
-.footer-left{
-    border-right: 1px solid #fff;
-    width: 35%;
-    height: 100%;
+.footer-left {
+  border-right: 1px solid #fff;
+  width: 35%;
+  height: 100%;
 }
-.footer-right{
-    height: 100%;
-    width: 65%;
+.footer-right {
+  height: 100%;
+  width: 65%;
 }
-.footer-quote{
-    font-size: 3em;
-    line-height: 40px;
-    width: 400px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid #fff;
-    margin: 15px;
+.footer-quote {
+  font-size: 3em;
+  line-height: 40px;
+  width: 400px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #fff;
+  margin: 15px;
 }
-.footer-social-media{
-    margin: 0 0 0 15px;
+.footer-social-media {
+  margin: 0 0 0 15px;
 }
+<<<<<<< HEAD
 .footer-icon{
     display: block;
     color: #fff !important;
@@ -78,35 +124,44 @@ export default {
 }
 .footer-icon:hover, .ic, .ic-text{
     font-size: 1.1em;
+=======
+.footer-icon {
+  color: #fff !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  line-height: 24px;
+>>>>>>> a385c054289f49435519db39a4f88e599795b3ad
 }
-.footer-nav{
-    display: inline-block;
-    margin-left: 40px;
-    color: #fff;
+.footer-nav {
+  display: inline-block;
+  margin-left: 40px;
+  color: #fff;
 }
-.footer-tb{
-    margin-left: auto;
-    margin-right: auto;
+.footer-tb {
+  margin-left: auto;
+  margin-right: auto;
 }
-.column, .art-title{
-    height: 40px;
-    line-height: 40px;
+.column,
+.art-title {
+  height: 40px;
+  line-height: 40px;
 }
-.art-title{
-    color: #fff;
+.art-title {
+  color: #fff;
 }
-.footer-links{
-    color: #fff !important;
-    padding-top: 15px !important;
+.footer-links {
+  color: #fff !important;
+  padding-top: 15px !important;
 }
-.footer-rights{
-    text-align: center;
-    border-top: 1px solid #fff;
-    margin-top: 10px;
-    padding: 15px 0 0 15px;
-    line-height: 50px;
-    height: 100px;
+.footer-rights {
+  text-align: center;
+  border-top: 1px solid #fff;
+  margin-top: 10px;
+  padding: 15px 0 0 15px;
+  line-height: 50px;
+  height: 100px;
 }
+<<<<<<< HEAD
 .ic, .ic-text{
     font-size: 1.2em;
 }
@@ -114,3 +169,6 @@ export default {
     letter-spacing: 1px;
 }
 </style>
+=======
+</style>
+>>>>>>> a385c054289f49435519db39a4f88e599795b3ad
