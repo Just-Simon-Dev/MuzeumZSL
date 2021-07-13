@@ -113,7 +113,6 @@ export default {
 .footer-social-media {
   margin: 0 0 0 15px;
 }
-<<<<<<< HEAD
 .footer-icon{
     display: block;
     color: #fff !important;
@@ -124,13 +123,6 @@ export default {
 }
 .footer-icon:hover, .ic, .ic-text{
     font-size: 1.1em;
-=======
-.footer-icon {
-  color: #fff !important;
-  cursor: pointer;
-  text-decoration: none !important;
-  line-height: 24px;
->>>>>>> a385c054289f49435519db39a4f88e599795b3ad
 }
 .footer-nav {
   display: inline-block;
