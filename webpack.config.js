@@ -3,20 +3,18 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     entry: './src/main.js',
+    output: {
+        assetModuleFilename: 'assets/[name][ext]'
+    },
     module: {
         rules: [
             { test: /\.js$/, use: 'babel-loader' },
             { test: /\.vue$/, use: 'vue-loader' },
             { test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                options: {
-                    publicPath: 'assets',
-                    outputPath: 'images',
-                    name: '[name].[ext]',
-                },
-            },
+                test: /\.png/,
+                type: 'asset/resource'
+            }
         ]
     },
     plugins: [

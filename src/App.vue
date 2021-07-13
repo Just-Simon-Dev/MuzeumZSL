@@ -1,4 +1,4 @@
-E<template>
+<template>
   <div id="app">
     <Items></Items>
   </div>

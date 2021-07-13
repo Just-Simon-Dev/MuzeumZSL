@@ -1,16 +1,15 @@
 <template>
   <div id="nav">
-      <a href="#" style="text-decoration: none">
+    <a href="#" style="text-decoration: none">
       <div class="nav-title">
-          Muzeum ZSŁ
+        Muzeum ZSŁ
       </div>
-      </a>
-      <div class="nav-links">
-        <div class="nav-element" :key="art.title" v-for="art in arts">
-            <a :href="art.href">
-                {{art.title}}
-            </a>
-        </div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-element" :key="art.title" v-for="art in arts">
+        <a :href="art.href">
+          {{ art.title }}
+        </a>
       </div>
     </div>
   </div>
@@ -26,7 +25,7 @@ export default {
       arts: [
         { title: "kontakt", href: "#contact" },
         { title: "eskponaty", href: "#items" },
-        { title: "aktualnosci", href: "#news" },
+        { title: "aktualności", href: "#news" },
         { title: "o muzeum", href: "#muzeum" },
       ],
     };
@@ -41,7 +40,6 @@ export default {
   margin: 0;
   box-sizing: border-box;
   font-family: "Quicksand";
-  color: #fff !important;
 }
 #nav {
   position: fixed;
@@ -53,13 +51,15 @@ export default {
   z-index: 2;
   border-bottom: 1px solid #fff;
   transition: 0.3s ease-in-out !important;
+  color: #fff !important;
 }
 .nav-title {
   font-size: 2em;
   opacity: 1 !important;
+  color: #fff !important;
 }
 .nav-element a {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none !important;
   font-size: 1.5em;
 }
@@ -87,8 +87,8 @@ export default {
   transform: scaleX(1);
   transform-origin: left;
 }
-.black{
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    border-bottom: none !important;
+.black {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border-bottom: none !important;
 }
 </style>

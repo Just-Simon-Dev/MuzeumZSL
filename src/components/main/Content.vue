@@ -35,6 +35,7 @@ export default {
     top: 50%;
     left: 12%;
     line-height: 30px;
+    color: #fff !important;
 }
 .arrow {
   position: absolute;

@@ -1,5 +1,5 @@
 <template>
-  <div id="muzeum">
+  <div id="items">
       <div class="space"></div>
       <div class="container animate__animated animate__fadeInUp">
           <Card v-for="contant in contents" :key="contant.id" :title="contant.title" :content="contant.content" :img="contant.img" :href="contant.href"></Card>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style>
-#muzeum{
+#items{
     position: relative;
     height: 100vh;
 }
