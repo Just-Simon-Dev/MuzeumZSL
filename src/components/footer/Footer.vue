@@ -27,7 +27,7 @@
         </td>
       </table>
       <div class="footer-rights">
-        Wszelkie prawa zastrzeżone &copy
+        Wszelkie prawa zastrzeżone &copy;
         <span style="letter-spacing: 1px;">MuzeumZSŁ</span> 2021
       </div>
     </div>
