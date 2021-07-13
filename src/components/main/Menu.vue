@@ -64,7 +64,7 @@ export default {
   font-size: 1.5em;
 }
 .nav-element {
-  display: inline-block;
+  display: block;
   float: right;
   margin-right: 1em;
   position: relative;

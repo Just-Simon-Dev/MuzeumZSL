@@ -22,6 +22,7 @@ export default {
   position: relative;
   top: 53px;
   background-image: url("https://static.polityka.pl/_resource/res/path/4e/5a/4e5a5440-4db1-4708-b5b7-8287fa65b8aa");
+  margin-bottom: 10px;
 }
 .banner > h2 {
   height: 200px;
@@ -30,5 +31,6 @@ export default {
   position: relative;
   top: 30px;
   left: 10%;
+  color: white;
 }
 </style>
