@@ -1,12 +1,12 @@
 <template>
-  <div class="content" v-animate-onscroll.repeat="'animate__animated animate__fadeIn'">
+  <div class="entry-content" v-animate-onscroll.repeat="'animate__animated animate__fadeIn'">
     <div class="image" :style="`background: url('${imagePath}')`"></div>
     <div class="text">
-      <h3 class="title">{{ title }}</h3>
+      <h3 class="entry-title">{{ title }}</h3>
       <div class="description">
         <p>{{ description }}</p>
       </div>
-      <button class="btn" type="button"><font-awesome-icon class="ic" :icon="['fas', 'table']" /></button>
+      <a class="entry-btn" >Czytaj więcej</a>
     </div>
     
   </div>
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style>
-.content {
+.entry-content {
   position: relative;
   height: 40vh;
   min-height: 400px;
@@ -50,30 +50,30 @@ export default {
   margin: 100px 0 0 0;
   transition: 0.3s ease-in-out;
 }
-.content:nth-child(2n){
+.entry-content:nth-child(2n){
   background: #eb3b5a;
   color: #fff;
   float: right;
   border-radius: 10px 0 0 10px !important;
 }
-.content:nth-child(2n) .image{
+.entry-content:nth-child(2n) .image{
   border-radius: 10px 0 0 10px !important;
 }
-.content:nth-child(2n) .btn{
+.entry-content:nth-child(2n) .entry-btn{
   background: #fff;
   color: #eb3b5a;
   right: 10px;
 }
-.content:nth-child(2n+1){
+.entry-content:nth-child(2n+1){
   background: #fff;
   float: left;
   border-radius: 0 10px 10px 0;
 }
-.content:nth-child(2n+1) .image{
+.entry-content:nth-child(2n+1) .image{
   float: right;
   border-radius: 0 10px 10px 0;
 }
-.content:nth-child(2n+1) .btn{
+.entry-content:nth-child(2n+1) .entry-btn{
   background: #eb3b5a;
   color: #fff;
   left: 10px;
@@ -94,7 +94,7 @@ img {
   width: 70%;
   float: left;
 }
-.title {
+.entry-title {
   width: 40%;
   margin: 20px auto;
   text-align: center;
@@ -102,17 +102,16 @@ img {
   padding: 17px 0 12px 0;
 }
 .description {
-  width: 80%;
+  width: 75%;
   margin: auto;
   padding: 20px;
   line-height: 200%;
 }
-.btn{
+.entry-btn{
   position: absolute;
   bottom: 10px;
-  font-size: 24px;
   border: none;
-  border-radius: 50%;
+  border-radius: 20px;
   padding: 10px;
   cursor: pointer;
 }

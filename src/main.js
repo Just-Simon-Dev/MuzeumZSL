@@ -11,15 +11,27 @@ import {
     faFacebook,
     faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import {faTable} from "@fortawesome/free-solid-svg-icons"
+import VueRouter from 'vue-router'
+import Items from './components/items/Items.vue'
+import Home from './components/home/Home.vue'
 
-library.add(faInstagram, faFacebook, faYoutubeSquare, faTable);
+library.add(faInstagram, faFacebook, faYoutubeSquare);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.use(VueAnimateOnScroll);
 Vue.use(VueMaterial);
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+    routes: [
+        {path: '/', component: Home},
+        { path: '/eksponaty/:category', component: Items}
+    ],
+    mode: 'history'
+})
 
 new Vue({
     el: "#app",
+    router: router,
     render: (h) => h(App),
 });

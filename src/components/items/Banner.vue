@@ -1,16 +1,12 @@
 <template>
   <div class="banner">
-    <h2>{{ title }}</h2>
+    <h2>{{ $route.params.category }}</h2>
   </div>
 </template>
 
 <script>
 export default {
-  data: () => {
-    return {
-      title: "Komputery",
-    };
-  },
+  
 };
 </script>
 

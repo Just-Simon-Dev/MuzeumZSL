@@ -20,7 +20,7 @@
               if="art.isSelect"
               v-for="comp in art.comps"
             >
-              <a :href="comp.href" class="footer-links">{{ comp.title }}</a>
+              <router-link :to="'/eksponaty/'+comp.title" class="footer-links">{{ comp.title }}</router-link>
             </tr>
           </td>
         </table>
@@ -30,7 +30,6 @@
         </div>
       </div>
     </div>
-    </div>
     
 </template>
 
@@ -38,7 +37,7 @@
 export default {
     data: () => {
         return{
-            arts: [{title: 'o muzeum', href: '#muzeum', isSelect: false}, {title: 'aktualności', href:'#news', isSelect: false}, {title: 'eskponaty', href: '#items', isSelect: true, comps: [{title: 'telewizory', href: '/tvs'}, {title: 'radia', href: '/radios'}, {title: 'magnetofony', href: '/magnetofons'}, {title: 'komputery', href: '/computers'}, {title: 'gramofony', href: '/gramofons'}]}, {title: 'kontakt', href: '#contact', isSelect: false}]
+            arts: [{title: 'o muzeum', href: '#muzeum', isSelect: false}, {title: 'aktualności', href:'#news', isSelect: false}, {title: 'eskponaty', href: '#items', isSelect: true, comps: [{title: 'telewizory'}, {title: 'radia'}, {title: 'magnetofony'}, {title: 'komputery'}, {title: 'gramofony'}]}, {title: 'kontakt', isSelect: false}]
         }
     }
 }

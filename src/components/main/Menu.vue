@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <a href="#" style="text-decoration: none">
+    <a href="/#main" style="text-decoration: none">
       <div class="nav-title">
         Muzeum ZSŁ
       </div>
@@ -23,10 +23,10 @@ export default {
   data: () => {
     return {
       arts: [
-        { title: "kontakt", href: "#contact" },
-        { title: "eskponaty", href: "#items" },
-        { title: "aktualności", href: "#news" },
-        { title: "o muzeum", href: "#muzeum" },
+        { title: "kontakt", href: "/#contact" },
+        { title: "eskponaty", href: "/#items" },
+        { title: "aktualności", href: "/#news" },
+        { title: "o muzeum", href: "/#muzeum" },
       ],
     };
   },

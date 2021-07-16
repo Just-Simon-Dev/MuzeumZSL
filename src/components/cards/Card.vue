@@ -1,12 +1,12 @@
 <template>
   <div class="card content-title" v-animate-onscroll.repeat="'animate__animated animate__zoomIn'">
-      <a class="btn" :href="this.href">
+      <router-link class="btn" :to="this.href">
         <div class="title">{{this.title}}</div>
         <div class="content">
             <div class="content-text">{{this.content}}</div>
             </div>
             <div class="background" :style="{backgroundImage: `url(${this.img})`}"></div>
-        </a>
+        </router-link>
   </div>
 </template>
 

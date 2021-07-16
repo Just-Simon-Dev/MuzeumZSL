@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div id="eksponaty">
     <Menu></Menu>
     <Banner></Banner>
     <Entry v-for="item in items" :key="item.id" :id="item.id"></Entry>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style>
-.main {
+#eksponaty {
   background-color: #2c2c54;
   width: 100%;
   overflow: auto;
