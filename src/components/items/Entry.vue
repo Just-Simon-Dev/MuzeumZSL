@@ -6,7 +6,7 @@
       <div class="description">
         <p>{{ description }}</p>
       </div>
-      <a class="entry-btn" >Czytaj więcej</a>
+      <router-link class="entry-btn" :to="'/details/'+this.id">Czytaj więcej</router-link>
     </div>
     
   </div>
@@ -61,7 +61,7 @@ export default {
 }
 .entry-content:nth-child(2n) .entry-btn{
   background: #fff;
-  color: #eb3b5a;
+  color: #eb3b5a !important;
   right: 10px;
 }
 .entry-content:nth-child(2n+1){
@@ -75,7 +75,7 @@ export default {
 }
 .entry-content:nth-child(2n+1) .entry-btn{
   background: #eb3b5a;
-  color: #fff;
+  color: #fff !important;
   left: 10px;
 }
 .image {
@@ -114,5 +114,6 @@ img {
   border-radius: 20px;
   padding: 10px;
   cursor: pointer;
+  text-decoration: none !important;
 }
 </style>
