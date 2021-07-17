@@ -1,5 +1,6 @@
 <template>
   <div id="details">
+      <router-link to="nigga">sus</router-link>
       <div class="details-title">nice title</div>
       <div class="details-content">
           <div class="work">
