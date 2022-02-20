@@ -4,7 +4,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports = {
     entry: './src/main.js',
     output: {
-        assetModuleFilename: 'assets/[name][ext]'
+        assetModuleFilename: '../dist/[name][ext]'
     },
     module: {
         rules: [
@@ -29,5 +29,14 @@ module.exports = {
             template: './src/index.html',
         }),
         new VueLoaderPlugin(),
-    ]
+    ],
+    devServer: {
+
+        compress: true,
+        port: 4200,
+        proxy: {
+            '/api': 'http://localhost:8080',
+            '/api/hellou': 'http://localhost:8080/hellou',
+        },
+    },
 };

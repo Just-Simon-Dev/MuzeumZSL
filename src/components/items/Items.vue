@@ -2,7 +2,7 @@
   <div id="eksponaty">
     <Menu></Menu>
     <Banner></Banner>
-    <Entry v-for="item in items" :key="item.id" :id="item.id"></Entry>
+    <Entry :obj="item" v-for="item in items" :key="item.id" :id="item.id"></Entry>
   </div>
 </template>
 
@@ -18,9 +18,18 @@ export default {
   },
   data: () => {
     return {
-      items: [{ id: 1 }, { id: 2 }, { id: 3 }],
+      items: [],
+      name: window.location.href.split('/')[4],
     };
   },
+  created: function() {
+    fetch('http://localhost:8080/getItems/'+this.name)
+        .then(response => response.json())
+        .then(data => {
+          this.items = data[0]
+          console.log(this.items)
+        })
+  }
 };
 </script>
 

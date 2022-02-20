@@ -2,41 +2,31 @@
   <div class="entry-content" v-animate-onscroll.repeat="'animate__animated animate__fadeIn'">
     <div class="image" :style="`background: url('${imagePath}')`"></div>
     <div class="text">
-      <h3 class="entry-title">{{ title }}</h3>
+      <h3 class="entry-title">{{ this.obj.title }}</h3>
       <div class="description">
-        <p>{{ description }}</p>
+        <p>{{ this.obj.description }}</p>
       </div>
-      <router-link class="entry-btn" :to="'/details/'+this.id">Czytaj więcej</router-link>
+
     </div>
-    
+    <router-link class="entry-btn" :to="'/details/'+this.obj.id">Czytaj więcej</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["id", "position"],
+  props: ["id", "position", "obj"],
   data: () => {
     return {
       imagePath: "../assets/images/loading.jpg",
-      title: "Loading...",
-      description:
-        "wait for the article to be loaded from database",
+      // title: "Loading...",
+      // description:
+      //   "wait for the article to be loaded from database",
     };
   },
   created: function() {
     // request for item with this.id
-
     this.imagePath =
       "https://static.turbosquid.com/Preview/2019/05/07__14_24_00/Retro_TV_Showa_Dirt_00.jpgDD92FD2F-8E7F-4427-8210-CCCEA527746DLarge.jpg";
-    this.title = "Telewizor model 2.3";
-    this.description = `
-  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-   Reiciendis magnam a eveniet tempore.
-    Itaque omnis neque doloribus deserunt aspernatur facere laboriosam amet culpa hic suscipit vero dignissimos explicabo sapiente ipsum corporis soluta,
-    consequatur repellat ducimus sed quae labore quod eligendi natus! Nesciunt dolor fuga sapiente laborum rerum perspiciatis quasi sunt ratione veniam,
-     ipsa, cupiditate illum, odit dolorum modi! Necessitatibus exercitationem consequuntur reprehenderit voluptatibus recusandae fugiat veritatis.
-      Soluta rerum nulla numquam veritatis repellendus excepturi, reprehenderit ipsum ab culpa, possimus eaque perferendis maiores nesciunt aliquid natus consequatur pariatur harum,
-    `;
   },
 };
 </script>
@@ -95,11 +85,16 @@ img {
   float: left;
 }
 .entry-title {
-  width: 40%;
-  margin: 20px auto;
+  margin: 20px 0px;
   text-align: center;
   font-size: 30px;
-  padding: 17px 0 12px 0;
+  padding: 17px 0 17px 0;
+}
+.entry-content:nth-child(2n) .entry-title{
+  border-bottom: #fff 1px solid;
+}
+.entry-content:nth-child(2n+1) .entry-title{
+  border-bottom: #eb3b5a 1px solid;
 }
 .description {
   width: 75%;

@@ -1,6 +1,6 @@
 <template>
   <div id="details">
-      <router-link to="nigga">sus</router-link>
+      <router-link :to="$router.back()">sus</router-link>
       <div class="details-title">nice title</div>
       <div class="details-content">
           <div class="work">
@@ -28,7 +28,6 @@
 
 <script>
 export default {
-
 }
 </script>
 
